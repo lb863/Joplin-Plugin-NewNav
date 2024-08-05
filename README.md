@@ -1,5 +1,7 @@
 # NewNav
 
+![Main Page Screenshot](https://github.com/lb863/Joplin-Plugin-NewNav/blob/main/Screenshot.png)
+
 ## Working
 1. **Navigation**: Functional for folders, notes, and to-dos.
 2. **Menu Bar**: Allows creating new notes, folders, and to-dos.
