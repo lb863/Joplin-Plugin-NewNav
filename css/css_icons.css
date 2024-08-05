@@ -1,0 +1,44 @@
+.fa-folder:before {
+    content: "\f07b";
+    color: #00a6ed;
+}
+
+.fa-file-alt:before {
+    content: "\f15c";
+    color: lightgrey;
+}
+
+.nav-item.note i {
+    color: var(--joplin-color);
+    -webkit-mask-position: center;
+    margin-right: 13px;
+    margin-left: -1px;
+}
+
+.nav-item.folder i {
+    color: var(--joplin-color);
+    margin-right: 12px;
+    margin-left: -2px;
+    -webkit-mask-position: center;
+}
+
+.nav-item i,
+.nav-item input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.nav-item input[type="checkbox"] {
+    flex-shrink: 0;
+    vertical-align: middle;
+    margin-right: 12px;
+    margin-left: -2px;
+}
+
+.nav-menu-icon {
+    transition: background-color 0.2s ease, box-shadow 0.2s ease;
+    padding: 3px 3px 3px 3px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.nav-header, .nav-menu-icon {}

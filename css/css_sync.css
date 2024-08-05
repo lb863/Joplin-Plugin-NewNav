@@ -1,0 +1,95 @@
+.sync-section {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    align-content: stretch;
+    margin: 8px 0px 8px 0px;
+    align-self: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.sync-button, .folder-button, .note-button, .todo-button, .tags-button, .recycle-bin-button {
+    background: none;
+    border: none;
+    color: var(--joplin-color);
+    font-size: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin: 5px 0px 5px 0px;
+    position: relative; /* Ensure the tooltips are positioned relative to the icons */
+}
+
+.sync-button i, .folder-button i, .note-button i, .todo-button i, .tags-button i, .recycle-bin-button i {
+    margin-right: 5px;
+}
+
+.sync-button .fa-sync.spinning {
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Tooltip styling */
+.sync-button i[title], .folder-button i[title], .note-button i[title], .todo-button i[title], .tags-button i[title], .recycle-bin-button i[title] {
+    position: relative;
+    cursor: pointer;
+}
+
+.sync-button i[title]::after, .folder-button i[title]::after, .note-button i[title]::after, .todo-button i[title]::after, .tags-button i[title]::after, .recycle-bin-button i[title]::after {
+    content: attr(title);
+    position: absolute;
+    left: 50%;
+    bottom: 150%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    z-index: 1000;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    max-width: 200px; /* Ensure tooltips have a maximum width */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.sync-button i[title]:hover::after, .folder-button i[title]:hover::after, .note-button i[title]:hover::after, .todo-button i[title]:hover::after, .tags-button i[title]:hover::after, .recycle-bin-button i[title]:hover::after {
+    opacity: 1;
+    visibility: visible;
+    white-space: nowrap;
+}
+
+.sync-button .fa-sync.spinning::after {
+    display: none;
+}
+
+/* Ensure tooltips stay within the frame */
+.sync-button:hover i[title]::after, .folder-button:hover i[title]::after, .note-button:hover i[title]::after, .todo-button:hover i[title]::after, .tags-button:hover i[title]::after, .recycle-bin-button:hover i[title]::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.sync-section .tooltip {
+    max-width: 200px;
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+.sync-section .tooltip::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+}

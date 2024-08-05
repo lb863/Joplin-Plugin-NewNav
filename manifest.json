@@ -1,0 +1,35 @@
+{
+    "manifest_version": 1,
+    "id": "com.example.navigationPanel",
+    "app_min_version": "2.4",
+    "version": "1.0.0",
+    "name": "Navigation Panel",
+    "description": "A navigation panel for Joplin to browse folders and notes.",
+    "author": "Your Name",
+    "homepage_url": "https://example.com",
+    "repository_url": "https://github.com/example/navigationPanel",
+    "permissions": [
+        "filesystem",
+        "joplin.data",
+        "joplin.workspace",
+        "joplin.settings",
+        "joplin.commands"
+    ],
+    "menu": [
+        {
+            "command": "myNavigateCommand",
+            "contexts": ["folderList"],
+            "title": "Navigate to Folder"
+        },
+        {
+            "command": "myOpenNoteCommand",
+            "contexts": ["noteList"],
+            "title": "Open Note"
+        },
+        {
+            "command": "myContextMenuCommand",
+            "contexts": ["editorContext"],
+            "title": "Context Menu Action"
+        }
+    ]
+}
