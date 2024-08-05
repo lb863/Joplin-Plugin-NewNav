@@ -1,4 +1,4 @@
-# Work in Progress
+# NewNav
 
 ## Working
 1. **Navigation**: Functional for folders, notes, and to-dos.
